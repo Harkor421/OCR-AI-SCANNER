@@ -9,9 +9,9 @@ Welcome to the PDF Text Extraction API. This API allows you to extract text and 
 The API endpoint for processing PDF files is:
 
 
-### POST /process
+## POST /process
 
-## Request
+### Request
 
 The endpoint expects a POST request with a PDF file as a form data parameter named `pdfFile`. Additionally, you need to include an API key in the request headers as `X-Api-Key`.
 
