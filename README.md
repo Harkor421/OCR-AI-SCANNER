@@ -86,9 +86,14 @@ Example POST Request
 Here's an example of how to make a POST request to the API using Python's requests library:
 
 ```
+import requests
+
+url = 'http://localhost:5000/process'
+files = {'pdfFile': open('example.pdf', 'rb')}
+headers = {'X-Api-Key': 'YOUR_API_KEY_HERE'}
+
+response = requests.post(url, files=files, headers=headers)
+print(response.json())
 
 ```
 
-```
-
-```
