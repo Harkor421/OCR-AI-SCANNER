@@ -70,5 +70,8 @@ X-Api-Key: YOUR_API_KEY_HERE
 ]
 }
 
+```
+
 Example POST Request
 Here's an example of how to make a POST request to the API using Python's requests library:
+```
