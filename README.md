@@ -77,7 +77,6 @@ Example Response
     }
   ]
 }
-
 ```
 
 Example POST Request
