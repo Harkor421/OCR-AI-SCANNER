@@ -1,0 +1,7 @@
+openai
+PyPDF2
+pdf2image
+pytesseract
+Pillow
+Flask
+python-dotenv

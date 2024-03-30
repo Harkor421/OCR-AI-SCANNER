@@ -6,11 +6,14 @@ from pdf2image import convert_from_bytes
 import pytesseract
 from PIL import Image, ImageEnhance
 from flask import Flask, request, jsonify
+from dotenv import load_dotenv
+import os
 
-# Replace 'your_secret_key' with your actual secret key
-SECRET_KEY = '7mj28tfs3em6p14zeh6tne27wr9t6vfbo'
-pytesseract.pytesseract.tesseract_cmd = 'C:/Program Files/Tesseract-OCR/tesseract.exe'
-openai.api_key = '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'
+load_dotenv()
+
+SECRET_KEY = os.getenv("API_PASSWORD")
+pytesseract.pytesseract.tesseract_cmd = os.getenv("PYTESSERACT_LOCATION")
+openai.api_key = os.getenv("OPEN_AI_API_KEY")
 
 app = Flask(__name__)
 
@@ -98,7 +101,7 @@ def extract_text_from_pdf(pdf_file_path):
     extracted_text_combined = "\n".join(extracted_text)
     return extracted_text_combined
 
-def interact_with_gpt(prompt):
+def interact_with_gpt(prompt): #This can be modified to any prompt
     response = openai.Completion.create(
         engine="text-davinci-003",
         prompt="""De este texto que es de Colombia extrae el identificacion_proveedor (NIT O DOCUMENTO DE IDENTIDAD), nombre_proveedor, correo_proveedor, contacto_proveedor, direccion_proveedor, telefono_proveedor, 
@@ -114,7 +117,7 @@ def interact_with_gpt(prompt):
     )
     return response.choices[0].text
 
-def interact_with_gpt_2(prompt):
+def interact_with_gpt_2(prompt): #This can be modified to any prompt
     response = openai.Completion.create(
         engine="text-davinci-003",
         prompt="""De este texto extrae los items de una compra. descripcion, cantidad, marca, unidad_monetaria (PESOS, DOLAR, EURO), valor,
