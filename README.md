@@ -97,3 +97,7 @@ print(response.json())
 
 ```
 
+## Feedback
+
+Feel free to improve OCR or AI integration by making a PR. Issues will also be addressed in this same repository.
+
