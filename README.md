@@ -9,7 +9,7 @@ Welcome to the PDF Text Extraction API. This API allows you to extract text and 
 The API endpoint for processing PDF files is:
 
 
-## POST /process
+#### POST /process
 
 ### Request
 
