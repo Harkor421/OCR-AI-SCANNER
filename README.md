@@ -1,4 +1,4 @@
-# OCR PDF Text Extraction API USING AI
+# OCR PDF Text Extraction API Using AI
 
 Welcome to the PDF Text Extraction API. This API allows you to extract text and process information from PDF documents using various AI models from Open AI API using OCR.
 
